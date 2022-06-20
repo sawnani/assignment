@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>IBM Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <article class="container-fluid">
+
+
+
+    <div class="jumbotron text-center">
+      <h1>IBM Angular Assignemnt</h1>
+    </div>
+    <section class="row bg-secondary mx-4 p-4 text-light font-weight-bold">
+      <div class="col-md-1">
+        ID
+      </div>
+      <div class="col-2">
+        Blend Name
+      </div>
+      <div class="col-2">
+        Origin
+      </div>
+      <div class="col-2">
+        Variety
+      </div>
+      <div class="col-4">
+        notes
+      </div>
+      <div class="col-1">
+        intensifier
+      </div>
+    </section>
+    <ng-container *ngFor="let coffeeForm of coffeeListForm?.controls let i=index">
+      <section class="row mx-4 p-4 bg-light">
+        <div class="col-1">
+         {{coffeeForm.get('id')?.value}}
+        </div>
+        <div class="col-2">
+          {{coffeeForm.get('blend_name')?.value}}
+        </div>
+        <div class="col-2">
+          {{coffeeForm.get('origin')?.value}}
+        </div>
+        <div class="col-2">
+          {{coffeeForm.get('variety')?.value}}
+        </div>
+        <div class="col-4">
+          {{coffeeForm.get('notes')?.value}}
+        </div>
+        <div class="col-1">
+          {{coffeeForm.get('intensifier')?.value}}
+        </div>
+      </section>
+    </ng-container>
+    <footer>
+      <div class="footer-cpyright text-center">
+        Avinash Ladharam Sawnani
+      </div>
+    </footer>
+  </article>
+</body>
+
+</html>
